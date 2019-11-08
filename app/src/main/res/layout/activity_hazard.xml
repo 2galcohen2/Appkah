@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.myapplication.HazardActivity">
+
+    <include layout="@layout/app_bar" />
+
+    <ImageView
+        android:id="@+id/imHazardType"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/app_bar"
+        android:layout_centerHorizontal="true"
+        android:cropToPadding="true"
+        android:padding="1dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background" />
+
+    <!--Address-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvAddressWrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imHazardType"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp">
+
+        <EditText
+            android:id="@+id/etAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvAddressWrap"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="10dp"
+            android:enabled="false"
+            android:hint="@string/address"
+            style="@style/MyStyle" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Description-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvDescriptionWrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAddressWrap"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp">
+
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDescriptionWrap"
+            android:layout_centerHorizontal="true"
+            android:lines="2"
+            android:inputType="textMultiLine"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/notes"
+            style="@style/MyStyle" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvPhotos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDescriptionWrap"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/photos"
+        style="@style/MyStyle" />
+
+    <LinearLayout
+        android:id="@+id/linLayPictures"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvPhotos">
+
+        <ImageView
+            android:id="@+id/addPicture"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/linLayPictures"
+            android:cropToPadding="true"
+            android:onClick="onAddPhoto"
+            android:padding="1dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pluspictureicon" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btCreateHazardRep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:layout_marginTop="28dp"
+        android:onClick="onHazardReport"
+        android:text="@string/btn_rep_hazard"
+        android:textColor="#f8fdf9" />
+
+
+</RelativeLayout>

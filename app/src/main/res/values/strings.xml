@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Appakah</string>
+    <string name="title_activity_create_report">CreateReport</string>
+    <string name="tv_report">דווח על:</string>
+    <string name="spn_rep_type">בחר סוג דוח:</string>
+    <string name="rep_type">סוג דוח:</string>
+    <string name="reporter">מדווח:</string>
+    <string name="hour">שעה:</string>
+    <string name="date">תאריך:</string>
+    <string name="fine_amount">סכום קנס:</string>
+    <string name="car_color">צבע הרכב:</string>
+    <string name="address">כתובת:</string>
+    <string name="car_type">דגם רכב:</string>
+    <string name="license_plate">מספר לוחית:</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="photos">תמונות</string>
+    <string name="notes">הערות</string>
+    <string name="shared_pref">shared pref</string>
+    <string name="reconginize">זהה לוחית</string>
+    <string name="title_activity_recognize_plate">RecognizePlate</string>
+
+
+</resources>

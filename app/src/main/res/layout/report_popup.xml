@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dip"
+    android:layout_width="match_parent"
+    android:background="@drawable/customborder"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_below="@id/imgView"
+        android:background="#800202bc"
+        android:textColor="@color/White"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:text="@string/tv_report" />
+
+    <GridView
+        android:id="@+id/gvBoard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#800000c0"
+        android:columnWidth="100dp"
+        android:layout_below="@+id/tvReport"
+        android:gravity="center"
+        android:horizontalSpacing="5dp"
+        android:layout_marginBottom="10dp"
+        android:numColumns="auto_fit"
+        android:stretchMode="spacingWidthUniform"
+        android:verticalSpacing="15dp"></GridView>
+
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_rel_view"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/LightBlue"
+    tools:context="com.example.myapplication.MainMenuActivity">
+
+    <include layout="@layout/app_bar"/>
+
+    <TextView
+        android:id="@+id/tvHello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/DarkBlue"
+        android:textStyle="bold"
+        android:textSize="40dp" />
+
+    <Button
+    android:id="@+id/btNewReport"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@+id/tvHello"
+    android:layout_marginBottom="28dp"
+    android:layout_marginTop="28dp"
+    android:onClick="onCreateReport"
+    android:text="@string/btn_new_rep"
+    android:background="@color/DarkBlue"
+    android:padding="7dp"
+    android:textColor="#f8fdf9" />
+
+    <Button
+        android:id="@+id/btRepHazard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btNewReport"
+        android:layout_marginBottom="28dp"
+        android:onClick="onReportHazard"
+        android:text="@string/btn_rep_hazard"
+        android:background="@color/DarkBlue"
+        android:padding="7dp"
+        android:textColor="#f8fdf9" />
+
+    <Button
+        android:id="@+id/btShowReports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btRepHazard"
+        android:layout_marginBottom="28dp"
+        android:onClick="onShowReports"
+        android:text="@string/btn_show_all_reports"
+        android:background="@color/DarkBlue"
+        android:padding="7dp"
+        android:textColor="#f8fdf9" />
+
+    <Button
+        android:id="@+id/btCallTowTruck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btShowReports"
+        android:layout_marginBottom="28dp"
+        android:onClick="onCallTowTruck"
+        android:text="@string/btn_call_tow_truck"
+        android:background="@color/DarkBlue"
+        android:padding="7dp"
+        android:textColor="#f8fdf9" />
+
+
+</RelativeLayout>

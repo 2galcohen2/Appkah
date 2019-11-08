@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.myapplication.DisplayReport">
+
+        <include layout="@layout/app_bar" />
+
+        <ImageView
+            android:id="@+id/imgView"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/app_bar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:cropToPadding="true"
+            android:onClick="onTakePhoto"
+            android:padding="1dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background" />
+
+        <!--Reporter ID-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/etReporterIDWrap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgView"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/etReporterID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:hint="@string/reporter"
+                android:theme="@style/MyEditText" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!--Rep type-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/etRepTypeWrap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etReporterIDWrap"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/etRepType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:hint="@string/rep_type"
+                android:theme="@style/MyEditText" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!--Car type-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/etCarTypeWrap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etRepTypeWrap"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/etCarType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:hint="@string/car_type"
+                android:theme="@style/MyEditText" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!--Car color-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/etCarColorWrap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etCarTypeWrap"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/etCarColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:hint="@string/car_color"
+                android:theme="@style/MyEditText" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!--Plate num-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/etPlateNumWrap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etCarColorWrap"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/etPlateNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="8dp"
+                android:enabled="false"
+                android:hint="@string/license_plate"
+                android:theme="@style/MyEditText" />
+
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!--Date-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/etDateWrap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etPlateNumWrap"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/etDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:hint="@string/date"
+                android:inputType="date"
+                android:theme="@style/MyEditText" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!--Time-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/etTimeWrap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etDateWrap"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/etTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etTimeWrap"
+                android:layout_marginBottom="8dp"
+                android:enabled="false"
+                android:hint="@string/hour"
+                android:inputType="time"
+                android:theme="@style/MyEditText" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!--Fine-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/etFineWrap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etTimeWrap"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/etFineAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etTimeWrap"
+                android:layout_marginBottom="8dp"
+                android:enabled="false"
+                android:hint="@string/fine_amount"
+                android:inputType="number"
+                android:theme="@style/MyEditText" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!--Address-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/etAddressWrap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etFineWrap"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/etAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etAddressWrap"
+                android:layout_marginBottom="8dp"
+                android:enabled="false"
+                android:hint="@string/address"
+                android:theme="@style/MyEditText" />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </RelativeLayout>
+</ScrollView>

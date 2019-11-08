@@ -1,0 +1,7 @@
+<resources>
+    <string name="btn_new_rep">דוח חדש</string>
+    <string name="btn_rep_hazard">דווח על מפגע</string>
+    <string name="btn_show_all_reports">הצג דוחות</string>
+    <string name="btn_report_hazard">דווח על מפגע</string>
+    <string name="btn_call_tow_truck">הזמן גרר</string>
+</resources>
